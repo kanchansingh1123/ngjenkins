@@ -6,7 +6,7 @@ node {
      commit_id = readFile('.git/commit-id').trim()
    }
    stage('npm installation') {
-     nodejs(npm installation: 'nodejs') {
+     nodejs(nodeJSInstallationName: 'nodejs') {
        sh 'npm install'
      }
    }
