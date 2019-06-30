@@ -11,12 +11,12 @@ node {
      }
    }
    stage('test') {
-     nodejs(ng test: 'nodejs') {
+     nodejs(angular-test-command: 'nodejs') {
        sh 'ng test'
      }
    }
    stage('build') {
-     nodejs(ng build: 'nodejs') {
+     nodejs(angular-build-command: 'nodejs') {
        sh 'ng build'
      }
    }
