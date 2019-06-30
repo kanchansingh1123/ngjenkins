@@ -1,0 +1,26 @@
+node {
+   def commit_id
+   stage('Preparation') {
+     checkout ngjenkins repo
+     sh "git rev-parse --short HEAD > .git/commit-id"                        
+     commit_id = readFile('.git/commit-id').trim()
+   }
+   stage('npm installation') {
+     nodejs(npm installation: 'nodejs') {
+       sh 'npm install'
+     }
+   }
+   stage('test') {
+     nodejs(ng test: 'nodejs') {
+       sh 'ng test'
+     }
+   }
+   stage('build') {
+     nodejs(ng build: 'nodejs') {
+       sh 'ng build'
+     }
+   }
+   stage('build publish') {
+     
+   }
+}
