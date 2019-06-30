@@ -11,7 +11,7 @@ node {
      }
    }
    stage('test') {
-     nodejs(angular-test-command: 'nodejs') {
+     nodejs(angulartestcommand: 'nodejs') {
        sh 'ng test'
      }
    }
