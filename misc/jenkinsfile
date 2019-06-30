@@ -20,7 +20,4 @@ node {
        sh 'ng build'
      }
    }
-   stage('build publish') {
-     
-   }
 }
