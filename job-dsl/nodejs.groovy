@@ -14,6 +14,6 @@ job('NodeJS example') {
     }
     steps {
         shell("npm install")
-      shell("ng buil")
+      shell("ng build")
     }
 }
