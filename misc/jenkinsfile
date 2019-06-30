@@ -16,7 +16,7 @@ node {
      }
    }
    stage('build') {
-     nodejs(angular-build-command: 'nodejs') {
+     nodejs(angularbuildcommand: 'nodejs') {
        sh 'ng build'
      }
    }
